@@ -47,7 +47,6 @@ const Navbar = () => {
         </div>
         <ul className= {`navbar__container__menu ${toggleIcon ? "active" : ""}`}>
           {
-            // Ensure the return statement is inside map function
             data.map((item, key) => {
               return (
                 <li key={key} className="navbar__container__menu__item">
