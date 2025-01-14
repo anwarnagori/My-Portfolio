@@ -1,0 +1,126 @@
+.navbar {
+    background: var(--yellow-theme-nav-background-color);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.navbar>.navbar__container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: inherit;
+    padding: 0 20px;
+    flex: 1;
+}
+
+.navbar__container__logo {
+    color: var(--yellow-theme-main-color);
+    cursor: pointer;
+}
+
+.navbar__container__menu__item {
+    line-height: 40px;
+    margin-right: 1.5rem;
+    font-size: 1.6rem;
+
+    &::after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 0;
+        background: transparent;
+        transition: all 0.5s ease;
+    }
+
+    &:hover::after {
+        width: 100%;
+        background: var(--yellow-theme-main-color);
+    }
+}
+
+
+.navbar>.navbar__container__menu {
+    display: flex;
+    list-style: none;
+}
+
+.navbar__container__menu::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0;
+    background: transparent;
+    transition: all 0.5s ease;
+}
+
+.navbar__container__menu:hover::after {
+    width: 100%;
+    background: var(--yellow-theme-main-color);
+}
+
+.navbar__container__menu__item__links {
+    color: var(--yellow-theme-main-color);
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+.nav-icon {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar__container__menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+
+        position: absolute;
+        top: 80px;
+
+        left: -100%;
+
+        opacity: 0;
+        background: #181818;
+        transition: all 0.5s ease;
+
+    }
+
+    .navbar__container__menu.active {
+        left: 0;
+
+        opacity: 1;
+    }
+
+    .nav-icon {
+        display: block;
+        cursor: pointer;
+        color: var(--yellow-theme-main-color);
+        padding-right: 20px;
+    }
+
+    .navbar__container__menu__item {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid #282828;
+        margin: 0;
+        padding: 20px 0;
+
+    }
+
+    .navbar__container__menu__item__links {
+        color: var(--yellow-theme-main-color);
+
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .navbar__container__menu__item__links:hover {
+        color: var(--yellow-theme-main-color);
+    }
+}
