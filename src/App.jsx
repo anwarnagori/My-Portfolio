@@ -1,4 +1,5 @@
 import React from "react";
+import "./App"
 import { Routes, Route } from "react-router-dom";
 import Home from "./containers/home"
 import About from "./containers/about/"
@@ -12,6 +13,7 @@ const App = () => {
   return (
     <div className="App">
       <Navbar />
+      <div className="App__main-page-content">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -20,6 +22,7 @@ const App = () => {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      </div>
     </div>
   );
 };
