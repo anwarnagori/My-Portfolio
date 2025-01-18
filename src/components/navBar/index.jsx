@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaBars, FaReact } from "react-icons/fa";
 import { HiX } from "react-icons/hi";
-import "./style.scss"
+import "./style.css"
 import { Link } from "react-router-dom";
 
 const data = [
@@ -14,12 +14,12 @@ const data = [
     to: "/about",
   },
   {
-    label: "RESUME",
-    to: "/resume",
-  },
-  {
     label: "SKILLS",
     to: "/skills",
+  },
+  {
+    label: "RESUME",
+    to: "/resume",
   },
   {
     label: "PORTFOLIO",
