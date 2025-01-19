@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { FaBars, FaReact } from "react-icons/fa";
 import { HiX } from "react-icons/hi";
-import "./style.css"
 import { Link } from "react-router-dom";
+import "./style.css";
 
 const data = [
   {
@@ -12,14 +12,6 @@ const data = [
   {
     label: "ABOUT",
     to: "/about",
-  },
-  {
-    label: "SKILLS",
-    to: "/skills",
-  },
-  {
-    label: "PORTFOLIO",
-    to: "/portfolio",
   },
   {
     label: "CONTACT",
@@ -41,26 +33,22 @@ const Navbar = () => {
             <FaReact size={30} />
           </Link>
         </div>
-        <ul className= {`navbar__container__menu ${toggleIcon ? "active" : ""}`}>
-          {
-            data.map((item, key) => {
-              return (
-                <li key={key} className="navbar__container__menu__item">
-                  <Link
-                    className="navbar__container__menu__item__links"
-                    to={item.to}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              );
-            })
-          }
+        <ul className={`navbar__container__menu ${toggleIcon ? "active" : ""}`}>
+          {data.map((item, key) => {
+            return (
+              <li key={key} className="navbar__container__menu__item">
+                <Link
+                  className="navbar__container__menu__item__links"
+                  to={item.to}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
         <div className="nav-icon" onClick={handleToggleIcon}>
-            {
-                toggleIcon ? <HiX size={30} /> : <FaBars size={30} />
-            }
+          {toggleIcon ? <HiX size={30} /> : <FaBars size={30} />}
         </div>
       </nav>
     </div>

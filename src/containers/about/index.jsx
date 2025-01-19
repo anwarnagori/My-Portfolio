@@ -1,9 +1,9 @@
 import React from "react";
 import { BsInfoCircleFill } from "react-icons/bs";
 import PageHeaderContent from "../../components/pageHeaderContent";
-import "./style.css";
 import { DiApple, DiAndroid } from "react-icons/di";
 import { FaDev, FaDatabase } from "react-icons/fa";
+import "./style.css";
 
 const personalInformation = [
   {

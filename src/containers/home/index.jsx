@@ -12,9 +12,12 @@ const Home = () => {
         </h1>
       </div>
       <div className="home__contect-me">
-        {/* <a href="path/to/your-cv.pdf" download> */}
+        <a
+          href="src/containers/home/CV - MUHAMMAD ANWER.pdf_20250119_125735_0000.pdf"
+          download
+        >
           <button>Resume</button>
-        {/* </a> */}
+        </a>
       </div>
     </section>
   );
