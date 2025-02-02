@@ -15,7 +15,7 @@ const data = [
   },
   {
     label: "SKILLS",
-    to: "/skills"
+    to: "/skills",
   },
   {
     label: "CONTACT",

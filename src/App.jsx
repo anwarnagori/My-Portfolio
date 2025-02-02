@@ -2,7 +2,7 @@ import React from "react";
 import "./App";
 import { Routes, Route } from "react-router-dom";
 import Home from "./containers/home";
-import Skill from "./containers/skills"
+import Skill from "./containers/skills";
 import About from "./containers/about/";
 import Contact from "./containers/contact/";
 import Navbar from "./components/navBar";

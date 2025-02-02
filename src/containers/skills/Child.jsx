@@ -1,24 +1,31 @@
-import React from 'react'
-import { FaHtml5 } from 'react-icons/fa'
+import React, { useState } from "react";
 
-const Child = () => {
+const Child = ({ icon, skill, percentage }) => {
+  const [style, setStyle] = useState();
+
+  setTimeout(() => {
+    const newStyle = {
+      opacity: 1,
+      width: `${percentage}`,
+    };
+    setStyle(newStyle);
+  }, 1000);
+
   return (
     <div className="child">
-        <div className="content">
-            <div className="left">
-            <FaHtml5 />
+      <div className="content">
+        <div className="left">{icon}</div>
+        <div className="right">
+          <h2>{skill}</h2>
+          <div className="skill-bar">
+            <div className="progress" style={style}>
+              <span>{percentage}</span>
             </div>
-            <div className="right">
-                <h2>HTML5</h2>
-                <div className="skill-bar">
-                    <div className="progress">
-                        <span>90%</span>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Child
+export default Child;
