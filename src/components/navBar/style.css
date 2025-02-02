@@ -77,18 +77,13 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
         width: 100%;
-
         position: absolute;
         top: 80px;
-
         left: -100%;
-
         opacity: 0;
         background: #181818;
         transition: all 0.5s ease;
-
     }
 
     .navbar__container__menu.active {
